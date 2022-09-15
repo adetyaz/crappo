@@ -1,0 +1,47 @@
+.cta {
+	padding: 10rem;
+	background: linear-gradient(180deg, #2b076e 0%, #0d0d2b 100%);
+	position: relative;
+
+	&__card {
+		background: var(--color-blue);
+		padding: 5rem 3rem;
+		border-radius: var(--border-radius);
+		@include flex;
+		position: relative;
+		overflow: hidden;
+
+		@media screen and (max-width: 600px) {
+			flex-direction: row;
+		}
+	}
+
+	& p {
+		width: 35ch;
+	}
+
+	&__form-content {
+		display: flex;
+		gap: 1rem;
+	}
+
+	&__eth,
+	&__btc {
+		position: absolute;
+	}
+
+	&__eth {
+		width: 12%;
+		left: 14%;
+	}
+
+	&__btc {
+		right: 1%;
+		width: 7%;
+		bottom: -3.5rem;
+	}
+
+	&__line {
+		position: absolute;
+	}
+}

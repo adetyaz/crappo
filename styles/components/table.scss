@@ -1,0 +1,58 @@
+.table {
+	background: var(--color-purple);
+	padding: 2rem;
+	border-radius: var(--border-radius);
+	width: 50%;
+	color: var(--color-white);
+
+	&__head,
+	&__body {
+		display: flex;
+		padding: 0 1rem;
+		align-items: center;
+
+		@media screen and (max-width: 600px) {
+			flex-direction: row;
+		}
+	}
+
+	&__head {
+		justify-content: flex-end;
+		gap: 7.8rem;
+		margin-bottom: 1.5rem;
+	}
+
+	&__body {
+		gap: 7.5rem;
+		margin: -1rem 0;
+		& > div {
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+		}
+
+		&.alternate {
+			background: #4610ad;
+			border-radius: var(--border-radius);
+			position: relative;
+			right: 20%;
+			gap: 5rem;
+			margin: 1rem 0;
+			padding-inline: 4rem;
+		}
+	}
+
+	&__title {
+		h4 {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__logo {
+		width: 3rem;
+	}
+
+	&__caret {
+		display: inline-block;
+	}
+}

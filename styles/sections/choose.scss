@@ -1,0 +1,47 @@
+.choose {
+	@include flex;
+	background: var(--color-primary);
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	position: relative;
+
+	&__text-content {
+		& > div {
+			overflow: hidden;
+		}
+
+		& > div > h2 {
+			width: 20ch;
+		}
+
+		& > p {
+			margin: 3rem 0;
+			width: 40ch;
+		}
+	}
+
+	&__circle,
+	&__line,
+	&__u-shape {
+		position: absolute;
+
+		@media screen and (max-width: 600px) {
+			display: none;
+		}
+	}
+
+	&__circle {
+		right: -3%;
+		top: -15%;
+	}
+
+	&__line {
+		left: -3%;
+		top: 25%;
+	}
+
+	&__u-shape {
+		right: -3%;
+		bottom: 0;
+	}
+}

@@ -1,0 +1,23 @@
+.nav {
+	background-color: var(--color-primary);
+	display: flex;
+	gap: 3rem;
+
+	&__items {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		color: var(--color-white);
+	}
+
+	&__list {
+		list-style: none;
+		text-transform: capitalize;
+		overflow: hidden;
+	}
+
+	&__link {
+		display: block;
+		font-size: var(--fs-regular);
+	}
+}

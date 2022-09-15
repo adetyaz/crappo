@@ -1,20 +1,24 @@
 {
-  "name": "crappo",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5"
-  }
+	"name": "crappo",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"next": "12.2.5",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"@fontsource/inter": "^4.5.12",
+		"@fontsource/rubik": "^4.5.11",
+		"gsap": "^3.11.1",
+		"sass": "^1.54.8"
+	},
+	"devDependencies": {
+		"eslint": "8.23.0",
+		"eslint-config-next": "12.2.5"
+	}
 }

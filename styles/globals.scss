@@ -1,0 +1,124 @@
+@import './abstracts/mixins.scss';
+@import './abstracts/utilities.scss';
+@import './components/buttons.scss';
+@import './components/navigation.scss';
+@import './components/input.scss';
+@import './components/card.scss';
+@import './components/barchart.scss';
+@import './components/table.scss';
+@import './sections/hero.scss';
+@import './sections/valuation.scss';
+@import './sections/choose.scss';
+@import './sections/calculate.scss';
+@import './sections/cryptocurrencies.scss';
+@import './sections/features.scss';
+@import './sections/cta.scss';
+@import './sections/footer.scss';
+
+:root {
+	// colors
+	--color-primary: #0d0d2b;
+	--color-secondary: #2b076e;
+	--color-purple: #35068c;
+	--color-purple-2: #491f98;
+	--color-blue: #3671e9;
+	--color-green: #42ffff;
+	--color-red: #ff7676;
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-grey: #828282;
+
+	//font size
+	--fs-regular: 1.2rem;
+	--fs-heading-tertiary: 1.8rem;
+	--fs-heading-secondary: 2rem;
+	--fs-heading-primary: 4rem;
+
+	//border
+	--border-radius: 1.5rem;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	box-sizing: inherit;
+	font-size: 62.5%;
+
+	@media screen and (min-width: 1400px) {
+		font-size: 75%;
+	}
+
+	@media screen and (min-width: 1650px) {
+		font-size: 85%;
+	}
+}
+
+body {
+	line-height: 1.6;
+	font-family: 'Rubik', sans-serif;
+	overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.header {
+	@include flex;
+	background: var(--color-primary);
+	padding: 3.5rem 7rem 2rem;
+}
+
+h1,
+h2,
+h3,
+p {
+	color: var(--color-white);
+}
+
+h2.alternate,
+h3.alternate {
+	color: var(--color-primary);
+}
+
+p.alternate {
+	color: var(--color-grey);
+}
+
+h1 {
+	font-size: calc(var(--fs-heading-primary) + 1vw);
+}
+
+h2 {
+	font-size: calc(var(--fs-heading-secondary) + 1vw);
+}
+
+h3 {
+	font-size: var(--fs-heading-tertiary);
+}
+
+p {
+	font-size: var(--fs-regular);
+}
+
+section {
+	padding-inline: 7rem;
+	@media screen and (max-width: 600px) {
+		padding-inline: 2rem;
+	}
+}
+
+main {
+	overflow: hidden;
+}

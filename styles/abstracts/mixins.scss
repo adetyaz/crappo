@@ -1,0 +1,28 @@
+@mixin flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+	}
+}
+
+@mixin flex-2 {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+	}
+}
+
+@mixin flex-3 {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	@media screen and (max-width: 600px) {
+		flex-direction: row;
+	}
+}

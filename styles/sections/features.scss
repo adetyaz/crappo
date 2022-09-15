@@ -1,0 +1,50 @@
+.features {
+	padding: 10rem 10rem 10rem;
+	background: var(--color-secondary);
+	position: relative;
+
+	&__floating-circle {
+		position: absolute;
+		top: 0;
+	}
+
+	&__quater-circle {
+		position: absolute;
+		width: 16%;
+		top: 85%;
+		right: 0;
+	}
+
+	&__header-text {
+		text-align: center;
+	}
+
+	&__content {
+		@include flex;
+		position: relative;
+		margin-top: 8rem;
+		z-index: 1;
+
+		&.alternate {
+			margin: 25rem 0;
+			@media screen and (max-width: 600px) {
+				flex-direction: column-reverse;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			gap: 3rem;
+		}
+
+		& > div > p {
+			margin: 1rem 0;
+			width: 40ch;
+		}
+	}
+
+	&__statistics-image {
+		position: relative;
+		width: 60%;
+		left: -10%;
+	}
+}
