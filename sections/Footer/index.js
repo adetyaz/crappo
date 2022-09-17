@@ -16,6 +16,7 @@ gsap.registerPlugin(ScrollTrigger)
 const Footer = () => {
 	const tl = gsap.timeline()
 
+	const logo = useRef(null)
 	const footerContent = useRef(null)
 	const footerContent2 = useRef(null)
 	const footerContent3 = useRef(null)
@@ -31,7 +32,7 @@ const Footer = () => {
 	})
 
 	useEffect(() => {
-		tl.from(['.logo', footerContent, footerContent2, footerContent3], {
+		tl.from([logo, footerContent, footerContent2, footerContent3], {
 			opacity: 0,
 			y: 30,
 			stagger: 0.3,
@@ -52,7 +53,7 @@ const Footer = () => {
 	return (
 		<footer className='footer'>
 			<div className='footer__content'>
-				<Logo className='logo' />
+				<Logo className='logo' ref={(el) => (logo = el)} />
 				<ul ref={(el) => (footerContent = el)}>
 					<h3>Quick Link</h3>
 					<li>Home </li>
