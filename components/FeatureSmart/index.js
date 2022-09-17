@@ -27,7 +27,8 @@ const FeatureSmart = () => {
 		})
 			.from(chart, {
 				opacity: 0,
-				y: 50,
+				top: '15rem',
+				stagger: 0.3,
 			})
 			.from('.barchart__chart', {
 				scaleY: 0,

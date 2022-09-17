@@ -7,7 +7,7 @@ const Header = () => {
 	useEffect(() => {
 		gsap.from('.logo-wrapper', {
 			opacity: 0,
-			y: 50,
+			y: 200,
 		})
 	}, [])
 
