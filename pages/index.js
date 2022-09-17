@@ -31,5 +31,3 @@ export default function Home() {
 		</>
 	)
 }
-
-// https://tweenpages.vercel.app/docs

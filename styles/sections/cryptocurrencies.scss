@@ -6,6 +6,12 @@
 		overflow: hidden;
 	}
 
+	& > div:nth-child(1) {
+		@media screen and (max-width: 600px) {
+			padding-top: 6rem;
+		}
+	}
+
 	&__content {
 		@include flex;
 		padding-inline: 10rem;

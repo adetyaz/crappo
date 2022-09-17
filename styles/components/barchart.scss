@@ -6,6 +6,13 @@
 	font-family: 'Inter', sans-serif;
 	color: var(--color-white);
 	width: 50%;
+	transform: perspective(300rem) rotateY(15deg);
+	transition: transform 1s ease 0s;
+	cursor: pointer;
+
+	&:hover {
+		transform: perspective(150rem) rotateY(5deg);
+	}
 
 	@media screen and (max-width: 600px) {
 		width: 80%;
@@ -52,11 +59,22 @@
 		position: absolute;
 		border-radius: var(--border-radius);
 		box-shadow: 0 1px 1px 0.5px rgba(var(--color-white), 0.5);
+		cursor: pointer;
 
 		&--right {
 			right: 5%;
 			padding: 1.5rem 3rem;
 			font-size: var(--fs-heading-tertiary);
+			bottom: -22%;
+			transition: all 1s ease;
+
+			&:hover {
+				bottom: 1%;
+			}
+
+			@media screen and (max-width: 900px) {
+				padding: 1.5rem 2rem;
+			}
 
 			& > h4 {
 				text-align: center;
@@ -70,6 +88,16 @@
 		&--left {
 			padding: 1.5rem 2rem;
 			font-size: var(--fs-regular);
+			bottom: -46%;
+			transition: all 1s ease;
+
+			&:hover {
+				bottom: -22%;
+			}
+
+			@media screen and (max-width: 900px) {
+				padding: 1.5rem 1.5rem;
+			}
 
 			& > h4 {
 				width: 10ch;

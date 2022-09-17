@@ -1,5 +1,4 @@
 @import './abstracts/mixins.scss';
-@import './abstracts/utilities.scss';
 @import './components/buttons.scss';
 @import './components/navigation.scss';
 @import './components/input.scss';
@@ -78,6 +77,12 @@ a {
 	@include flex;
 	background: var(--color-primary);
 	padding: 3.5rem 7rem 2rem;
+
+	@media screen and (max-width: 600px) {
+		flex-direction: row;
+		position: relative;
+		align-items: flex-start;
+	}
 }
 
 h1,
@@ -121,4 +126,11 @@ section {
 
 main {
 	overflow: hidden;
+}
+
+.logo-wrapper {
+	color: var(--color-white);
+
+	text-transform: uppercase;
+	@include flex-3;
 }

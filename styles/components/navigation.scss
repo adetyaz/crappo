@@ -3,6 +3,10 @@
 	display: flex;
 	gap: 3rem;
 
+	& > h3 {
+		display: none;
+	}
+
 	&__items {
 		display: flex;
 		align-items: center;
@@ -19,5 +23,65 @@
 	&__link {
 		display: block;
 		font-size: var(--fs-regular);
+	}
+
+	@media screen and (max-width: 600px) {
+		position: absolute;
+
+		width: 100vw;
+		right: 0;
+		padding: 10rem 4rem;
+		flex-direction: column;
+		z-index: 2;
+		align-items: center;
+		top: -67rem;
+
+		& > div {
+			align-self: flex-end;
+			display: block;
+		}
+
+		&__items {
+			flex-direction: column;
+		}
+
+		&__items:last-child {
+			flex-direction: row;
+		}
+
+		&__link {
+			font-size: 1.5rem;
+			text-align: left;
+		}
+	}
+}
+
+.toggle {
+	background: white;
+	border-radius: 2rem;
+	width: 3rem;
+	height: 0.5rem;
+
+	&::after,
+	&::before {
+		content: '';
+		background: white;
+		width: 3rem;
+		height: 0.5rem;
+
+		display: block;
+		border-radius: 2rem;
+	}
+
+	&::before {
+		margin-top: 2rem;
+	}
+
+	&::after {
+		margin-top: -1.5rem;
+	}
+
+	@media screen and (min-width: 600px) {
+		display: none;
 	}
 }

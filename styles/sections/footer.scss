@@ -3,8 +3,16 @@
 	background: var(--color-primary);
 	color: var(--color-white);
 
+	@media screen and (max-width: 600px) {
+		padding: 6rem 2rem;
+	}
+
 	&__content {
 		@include flex-2;
+
+		@media screen and (max-width: 600px) {
+			gap: 3rem;
+		}
 
 		& > ul > li {
 			font-size: var(--fs-regular);
@@ -15,6 +23,9 @@
 		& > ul > h3,
 		& > div > h3 {
 			margin-bottom: 3rem;
+			@media screen and (max-width: 600px) {
+				margin-bottom: 1rem;
+			}
 		}
 
 		& > div > h3 {
@@ -33,6 +44,12 @@
 	&__copyright {
 		@include flex;
 		margin-top: 10rem;
+
+		@media screen and (max-width: 600px) {
+			margin-top: 5;
+			align-items: flex-start;
+			gap: 2rem;
+		}
 	}
 
 	&__social-icons {

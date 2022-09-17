@@ -3,6 +3,10 @@
 	background: linear-gradient(180deg, #2b076e 0%, #0d0d2b 100%);
 	position: relative;
 
+	@media screen and (max-width: 600px) {
+		padding: 2rem;
+	}
+
 	&__card {
 		background: var(--color-blue);
 		padding: 5rem 3rem;
@@ -12,7 +16,7 @@
 		overflow: hidden;
 
 		@media screen and (max-width: 600px) {
-			flex-direction: row;
+			gap: 3rem;
 		}
 	}
 

@@ -44,4 +44,10 @@
 		right: -3%;
 		bottom: 0;
 	}
+
+	&__image {
+		@media screen and (max-width: 600px) {
+			width: 100%;
+		}
+	}
 }

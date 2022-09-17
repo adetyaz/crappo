@@ -1,4 +1,6 @@
-const VisacardIcon = ({ className }) => {
+import React from 'react'
+
+const VisacardIcon = React.forwardRef(({ className }, ref) => {
 	return (
 		<svg
 			width='96'
@@ -7,6 +9,7 @@ const VisacardIcon = ({ className }) => {
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 			className={className}
+			ref={ref}
 		>
 			<rect opacity='0.05' width='96' height='64' rx='8' fill='#E0E0E0' />
 			<g clip-path='url(#clip0_1_491)'>
@@ -27,6 +30,6 @@ const VisacardIcon = ({ className }) => {
 			</defs>
 		</svg>
 	)
-}
+})
 
 export default VisacardIcon

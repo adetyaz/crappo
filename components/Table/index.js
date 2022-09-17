@@ -3,10 +3,11 @@ import CaretDown from '@icons/CaretDown'
 import CaretUp from '@icons/CaretUp'
 import EthereumLogo from '@icons/EthereumLogo'
 import LitecoinLogo from '@icons/LitecoinLogo'
+import React from 'react'
 
-const Table = () => {
+const Table = React.forwardRef(({ className }, ref) => {
 	return (
-		<div className='table'>
+		<div className='table' ref={ref}>
 			<div className='table__head'>
 				<p>Price</p>
 				<p>Change</p>
@@ -28,7 +29,7 @@ const Table = () => {
 				<p>$3420214</p>
 			</div>
 
-			<div className='table__body alternate'>
+			<div className={`table__body alternate ${className}`}>
 				<div>
 					<EthereumLogo className='table__logo' />
 					<div className='table__title'>
@@ -61,6 +62,6 @@ const Table = () => {
 			</div>
 		</div>
 	)
-}
+})
 
 export default Table

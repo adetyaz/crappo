@@ -1,6 +1,4 @@
-import React from 'react'
-
-const Logo = () => {
+const Logo = ({ className }) => {
 	return (
 		<svg
 			width='40'
@@ -8,6 +6,7 @@ const Logo = () => {
 			viewBox='0 0 40 40'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
+			className={className}
 		>
 			<path
 				d='M19.9999 40C31.0456 40 39.9999 31.0457 39.9999 20C39.9999 8.9543 31.0456 0 19.9999 0C8.95424 0 -6.10352e-05 8.9543 -6.10352e-05 20C-6.10352e-05 31.0457 8.95424 40 19.9999 40Z'

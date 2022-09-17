@@ -1,4 +1,6 @@
-const MastercardIcon = ({ className }) => {
+import React from 'react'
+
+const MastercardIcon = React.forwardRef(({ className }, ref) => {
 	return (
 		<svg
 			width='96'
@@ -7,6 +9,7 @@ const MastercardIcon = ({ className }) => {
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 			className={className}
+			ref={ref}
 		>
 			<rect opacity='0.05' width='96' height='64' rx='8' fill='#E0E0E0' />
 			<path
@@ -23,6 +26,6 @@ const MastercardIcon = ({ className }) => {
 			/>
 		</svg>
 	)
-}
+})
 
 export default MastercardIcon

@@ -3,6 +3,10 @@
 	background: var(--color-secondary);
 	position: relative;
 
+	@media screen and (max-width: 600px) {
+		padding: 5rem 2rem 3rem;
+	}
+
 	&__floating-circle {
 		position: absolute;
 		top: 0;
@@ -16,7 +20,13 @@
 	}
 
 	&__header-text {
-		text-align: center;
+		& > div {
+			overflow: hidden;
+		}
+
+		& > div > h2 {
+			text-align: center;
+		}
 	}
 
 	&__content {
@@ -46,5 +56,10 @@
 		position: relative;
 		width: 60%;
 		left: -10%;
+
+		@media screen and (max-width: 600px) {
+			left: 0;
+			width: 90%;
+		}
 	}
 }

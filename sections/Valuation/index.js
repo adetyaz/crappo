@@ -14,7 +14,6 @@ const Valuation = () => {
 		animation: tl,
 		trigger: '.valuation',
 		start: 'top 60%',
-		// markers: true,
 	})
 
 	const titleRef1 = useRef(null)
@@ -28,13 +27,14 @@ const Valuation = () => {
 	const iconRef3 = useRef(null)
 
 	useEffect(() => {
-		tl.from(iconRef1, {
+		tl.from([iconRef1, iconRef2, iconRef3], {
 			opacity: 0,
 			rotate: 50,
 			ease: 'Back.easeOut',
+			stagger: 0.3,
 		})
 			.fromTo(
-				titleRef1,
+				[titleRef1, titleRef2, titleRef3],
 				{
 					clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
 				},
@@ -45,55 +45,10 @@ const Valuation = () => {
 					stagger: 0.3,
 				}
 			)
-			.from(textRef1, {
+			.from([textRef1, textRef2, textRef3], {
 				opacity: 0,
 				y: 50,
-			})
-			.from(
-				iconRef2,
-				{
-					opacity: 0,
-					rotate: 50,
-					ease: 'Back.easeOut',
-				},
-				'-=0'
-			)
-			.fromTo(
-				titleRef2,
-				{
-					clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
-				},
-				{
-					clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 0 0)',
-					duration: 1,
-					ease: 'Power3.easeOut',
-					stagger: 0.3,
-				}
-			)
-			.from(textRef2, {
-				opacity: 0,
-				y: 50,
-			})
-			.from(iconRef3, {
-				opacity: 0,
-				rotate: 50,
-				ease: 'Back.easeOut',
-			})
-			.fromTo(
-				titleRef3,
-				{
-					clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
-				},
-				{
-					clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 0 0)',
-					duration: 1,
-					ease: 'Power3.easeOut',
-					stagger: 0.3,
-				}
-			)
-			.from(textRef3, {
-				opacity: 0,
-				y: 50,
+				stagger: 0.3,
 			})
 	}, [])
 

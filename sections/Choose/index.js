@@ -39,6 +39,11 @@ const Choose = () => {
 					ease: 'Power4.easeOut',
 				}
 			)
+			.from('.choose__image', {
+				opacity: 0,
+				y: 50,
+				stagger: 0.5,
+			})
 			.from([paragraphText, button], {
 				opacity: 0,
 				y: 50,

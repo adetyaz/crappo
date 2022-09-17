@@ -18,39 +18,43 @@ const Hero = () => {
 	const line2 = useRef(null)
 
 	useEffect(() => {
-		tl
-			// .fromTo(
-			// 	tag,
-			// 	{
-			// 		opacity: 0,
-			// 		x: '-15rem',
-			// 	},
-			// 	{
-			// 		opacity: 1,
-			// 		x: 0,
-			// 	}
-			// )
-			// 	.fromTo(
-			// 		[headerText, headerText1, headerText2],
-			// 		{
-			// 			clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
-			// 		},
-			// 		{
-			// 			clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 0 0)',
-			// 			duration: 1,
-			// 			stagger: 0.3,
-			// 			ease: 'Power3.easeOut',
-			// 		}
-			// 	)
-			// 	.from([paragraphText, button], {
-			// 		opacity: 0,
-			// 		y: 50,
-			// 		stagger: 0.1,
-			// 	})
+		tl.fromTo(
+			tag,
+			{
+				opacity: 0,
+				x: '-15rem',
+			},
+			{
+				opacity: 1,
+				x: 0,
+			}
+		)
+			.fromTo(
+				[headerText, headerText1, headerText2],
+				{
+					clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)',
+				},
+				{
+					clipPath: 'polygon(0 100%, 100% 100%, 100% 0, 0 0)',
+					duration: 1,
+					stagger: 0.3,
+					ease: 'Power3.easeOut',
+				}
+			)
+			.from('.hero__image', {
+				opacity: 0,
+				y: 50,
+				stagger: 0.1,
+			})
+
+			.from([paragraphText, button], {
+				opacity: 0,
+				y: 50,
+				stagger: 0.5,
+			})
 
 			.from([line1, line2], {
-				scaleY: 0,
-				transformOrigin: 'bottom left',
+				opacity: 0,
 				stagger: 0.5,
 				duration: 1,
 				ease: 'Circ.easeOut',

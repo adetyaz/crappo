@@ -53,7 +53,9 @@ const Calculate = () => {
 	return (
 		<section className='calculate'>
 			<div className='calculate__text-content'>
-				<h2 ref={(el) => (headText = el)}>Check how much you can earn</h2>
+				<div>
+					<h2 ref={(el) => (headText = el)}>Check how much you can earn</h2>
+				</div>
 				<p ref={(el) => (paragraphText = el)}>
 					Let’s check your hash rate to see how much you will earn today,
 				</p>
