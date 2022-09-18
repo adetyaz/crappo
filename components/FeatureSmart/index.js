@@ -37,11 +37,18 @@ const FeatureSmart = () => {
 				stagger: 0.2,
 			})
 
-			.from(['.left-tag', '.right-tag'], {
-				opacity: 0,
-				y: 50,
-				stagger: 0.1,
-			})
+			.fromTo(
+				['.left-tag', '.right-tag'],
+				{
+					opacity: 0,
+					y: 50,
+				},
+				{
+					opacity: 1,
+					y: 0,
+					stagger: 0.1,
+				}
+			)
 			.from([paragraphText, button], {
 				opacity: 0,
 				y: 50,
