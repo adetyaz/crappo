@@ -29,7 +29,6 @@ const Footer = () => {
 		animation: tl,
 		trigger: '.footer__content',
 		start: 'top 40%',
-		markers: true,
 	})
 
 	useEffect(() => {
