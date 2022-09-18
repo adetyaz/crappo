@@ -28,7 +28,7 @@ const Footer = () => {
 	ScrollTrigger.create({
 		animation: tl,
 		trigger: '.footer__content',
-		start: 'top 40%',
+		start: 'top 60%',
 	})
 
 	useEffect(() => {
